@@ -172,13 +172,12 @@ with col2:
     st.metric("🎯 Questions", 50)
 
 with col3:
-    if st.session_state.xp >= 400:
-    badge = "🏆 AI Expert"
-elif st.session_state.xp >= 100:
-    badge = "🥈 AI Explorer"
-else:
-    badge = "🌱 Beginner"
-    st.metric("🎖️ Badge", badge)
+  if st.session_state.xp >= 400:
+      badge = "🏆 AI Expert"
+  elif st.session_state.xp >= 100:
+     badge = "🥈 AI Explorer"
+  else:
+     badge = "🌱 Beginner"
 
 st.markdown("## 🗺️ Choose Your Mission")
 
