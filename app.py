@@ -172,12 +172,12 @@ with col2:
     st.metric("🎯 Questions", 50)
 
 with col3:
-    if st.session_state.xp >= 100:
-        badge = "🏆 AI Expert"
-    elif st.session_state.xp >= 50:
-        badge = "🥈 AI Explorer"
-    else:
-        badge = "🌱 Beginner"
+    if st.session_state.xp >= 400:
+    badge = "🏆 AI Expert"
+elif st.session_state.xp >= 100:
+    badge = "🥈 AI Explorer"
+else:
+    badge = "🌱 Beginner"
     st.metric("🎖️ Badge", badge)
 
 st.markdown("## 🗺️ Choose Your Mission")
@@ -199,7 +199,7 @@ st.write("### Test your intelligence. Challenge your knowledge.")
 st.write("DSC401-6 Artificial Intelligence | Units I & II")
 st.write("50 questions • Random order • Instant feedback • Final score")
 
-RESULT_FILE = Path("/content/ai_quiz_result.json")
+RESULT_FILE = Path("/tmp/ai_quiz_result.json")
 
 if "quiz" not in st.session_state:
     st.session_state.quiz = []
